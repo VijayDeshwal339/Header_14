@@ -1,0 +1,297 @@
+:root{
+  --background: #482BE7;
+  --Text: #1E0E62;
+  --white: #ffff; 
+  --pink:#E93A7D;
+  --grey:#808080;
+  --green: #25DAC5;
+  --login:#1DA1F2;
+}
+
+.main{
+  background-color: var(--Text);
+  background-repeat: no-repeat;
+  background-size: auto;
+    margin: 0; 
+    padding: 0;
+}
+
+/* header */
+.header {
+  overflow: hidden;
+ 
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color:var(--white);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  
+}
+.header a button{
+  background-color: var(--pink);
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid var(--pink) ;
+  /* width: 10vw; */
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  /* background-color: #ddd; */
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  /* background-color: dodgerblue; */
+  color:grey;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 710px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+
+/* middle part */
+
+.Middle{
+  display: flex;
+  gap:4%;
+  margin-top: 5%;
+ 
+}
+/* Middle left part */
+.Middle-Left{
+  width: 48%;
+  margin-top: 10vh;
+}
+ .mlh1{
+  font-size: 58px;
+  color: var(--white);
+}
+.mlp{
+  font-size: 22px;
+  color:var(--white);
+
+}
+.mlbtn{
+  border-radius: 35px;
+   width: 35%; 
+   height: 5vh; 
+   cursor: pointer;
+   background-color:var(--pink); 
+   border:var(--pink) ;
+}
+
+/* Middle Right part */
+.Middle-Right{
+  width: 48%; 
+  text-align: center;
+  border: 2px solidvar(--white);
+   background-color: var(--white);
+   height: 75vh; 
+   border-radius: 10px;
+   margin-bottom: 4.5%;
+}
+.mrh1{
+  font-size: 42px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: var(--Text);
+}
+#email{
+  width: 60%; 
+  border-radius: 35px; 
+  height: 7%;
+ border: 2px solid var(--grey)
+}
+#password{
+  width: 60%; 
+  border-radius: 35px; 
+  height: 7%;
+ border: 2px solid var(--grey)
+}
+
+/* check box code */
+.mror{
+  margin-inline: 20%;
+  float: left;
+}
+/* #checkbox{
+  background: var(--green);
+  font-size: 16px;
+  color: var(--green);
+}
+#label{
+  font-size: 16px;
+  color: var(--grey);
+ 
+} */
+
+.custom-checkbox {
+  display: flex;
+  align-items: center; /* Vertically align items in the flex container */
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none; /* Hide the default checkbox input */
+}
+
+.custom-checkbox label {
+  display: flex;
+  align-items: center; /* Vertically align label text with the checkbox */
+  color: var(--grey); /* Set the desired text color */
+  font-size: 16px; /* Set the desired font size for the label */
+}
+
+.custom-checkbox label::before {
+  content: " ";
+  display: inline-block;
+  width: 20px; /* Set the desired width for your checkbox */
+  height: 20px; /* Set the desired height for your checkbox */
+  border: 2px solid #25DAC5; /* Set the desired checkbox color */
+  background-color: #25DAC5; /* Set the background color (to appear unchecked) */
+  border-radius: 4px; /* Rounded corners for the checkbox */
+  text-align: center; /* Center the checkmark inside the checkbox */
+  line-height: 20px; /* Center the checkmark vertically */
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::before {
+  background-color: #25DAC5; /* Change the background color when checked */
+  border: 2px solid #25DAC5; /* Change the border color when checked */
+  content: "\2713"; /* Unicode checkmark character */
+  color: blue; /* Set the color of the checkmark */
+}
+
+
+/* Style the separator container */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 20%;
+}
+
+/* Style the horizontal line */
+.line {
+  width: 50vw;
+  flex: 1;
+  height: 1px;
+  background-color:var(--grey); /* You can change the color to your preference */
+}
+
+/* Style the "- or -" text */
+.text {
+  padding: 0 10px; /* Add spacing around the text */
+  color: var(--grey); /* Text color */
+  font-weight: bold;
+  font-size: 16px; /* Make the text bold, if desired */
+}
+
+.mrbtn1{
+  border-radius: 35px;
+   width: 60%; 
+   border: 1px solid  var(--background);
+   height: 7%;
+   background: var(--background);
+   font-size: 18px;
+   color:var(--white);
+}
+.mrbtn2{
+  border-radius: 35px;
+   width: 60%;
+   border: 1px solid var(--login) ;
+   
+    height: 7%; 
+    background: var(--login);
+    font-size: 18px;
+    color:var(--white);
+}
+.mrh7{
+  margin-bottom: 100px; 
+  font-size: 18px; 
+  color: var(--grey);
+}
+.mrh7 a{
+  color: var(--green);
+  cursor: pointer;
+}
+
+/* middle part media quries */
+
+@media screen and (max-width: 900px) {
+.Middle{
+  display: block;
+  /* margin-bottom: 50px; */
+}
+
+
+.Middle-Right{
+  margin-top: 40px;
+  width: 100%;  
+}
+.mrh1{
+ 
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.Middle-Left{
+  margin-top: 40px;
+  width: 100%;
+}
+
+}
+
+@media screen and (max-width:550px) {
+  .mlh1{
+    font-size:30px ;
+  }
+  .mlp{
+    font-size: 15px;
+  }
+.mrh1{
+  font-size: 30px;
+  padding: 10px;
+  margin-top: 0;
+}
+.mrbtn1{
+  font-size: 10px;
+}
+.mrbtn2{
+  font-size: 10px;
+}
+.label{
+  font-size: 10px;
+}
+
+}
