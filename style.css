@@ -294,3 +294,26 @@
 }
 
 }
+
+/*    checkbox  media queries */
+@media screen and (max-width: 600px) {
+  .mror {
+      margin-inline: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mror {
+      margin-inline: 2%;
+  }
+  .custom-checkbox label::before {
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      margin-right: 8px;
+  }
+}
+
+/*    */
+
+
